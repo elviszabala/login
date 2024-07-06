@@ -1,8 +1,8 @@
-<?php 
+<?php
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
+require_once('db/db.php');
 session_start();
-include './db/dbcon.php';
 
 if (!isset($_SESSION['username'])) {
  
@@ -11,11 +11,11 @@ if (!isset($_SESSION['username'])) {
 }
 
 
-?>
 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,7 +38,7 @@ if (!isset($_SESSION['username'])) {
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-      <p class="login-box-msg">Iniciar sesion en el sistema - desde el mac</p>
+      <p class="login-box-msg">Iniciar sesion en el sistema</p>
 
       <form action="loginchecker.php" method="post">
         <div class="input-group mb-3">
