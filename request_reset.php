@@ -46,10 +46,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     // Enviar el correo electrónico con el enlace de restablecimiento
-    $reset_link = "http://elvis.dtn.cl/log/reset_password.php?token=$token";
+    $reset_link = "http://tupagina.com/reset_password.php?token=$token";
     $subject = "Restablecimiento de Contraseña";
     $message = "Haz clic en el siguiente enlace para restablecer tu contraseña: $reset_link";
-    $headers = "From: no-reply@elvis.dtn.cl/log";
+    $headers = "From: no-reply@tupagina.com";
 
     if (mail($email, $subject, $message, $headers)) {
         echo "Se ha enviado un enlace de restablecimiento a tu correo electrónico.";
